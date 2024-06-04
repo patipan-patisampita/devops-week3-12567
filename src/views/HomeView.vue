@@ -4,7 +4,7 @@ const name = ref()
 const state = reactive({ age: null })
 const ceo = ref('Mark')
 const week = ref("Tueday")
-const country = ref([
+const countries = ref([
   "Thai","Malaysia","Singapore"
 ])
 </script>
@@ -12,8 +12,8 @@ const country = ref([
 <template>
   <nav>
     <h3>Home page</h3>
-    <div>
-      {{ country }}
+    <div v-for="(country,index) in countries" :key="index">
+     {{ index + 1 }} - {{ country }}
     </div>
     <hr />
     <span>
