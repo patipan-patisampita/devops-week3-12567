@@ -10,7 +10,12 @@ const week = ref("Tueday")
   <nav>
     <h3>Home page</h3>
     <span>
-      {{ week == 'Monday' ? 'If executed' : week == 'Tueday' ? 'Else If executed' : 'Else executed' }}
+      {{
+        week == 'Monday' ? 'If executed'
+        : week == 'Tueday' ? 'Else If1 executed'
+        : week == 'Wednesday' ? 'Else If2 executed'
+        : 'Else executed'
+      }}
     </span>
     <hr />
     <span v-if="ceo == 'Jhon'">
