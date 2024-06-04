@@ -4,17 +4,24 @@ const name = ref()
 const state = reactive({ age: null })
 const ceo = ref('Mark')
 const week = ref("Tueday")
+const country = ref([
+  "Thai","Malaysia","Singapore"
+])
 </script>
 
 <template>
   <nav>
     <h3>Home page</h3>
+    <div>
+      {{ country }}
+    </div>
+    <hr />
     <span>
       {{
-        week == 'Monday' ? 'If executed'
-        : week == 'Tueday' ? 'Else If1 executed'
-        : week == 'Wednesday' ? 'Else If2 executed'
-        : 'Else executed'
+      week == 'Monday' ? 'If executed'
+      : week == 'Tueday' ? 'Else If1 executed'
+      : week == 'Wednesday' ? 'Else If2 executed'
+      : 'Else executed'
       }}
     </span>
     <hr />
