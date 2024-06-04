@@ -9,11 +9,15 @@ const ceo = ref('Mark')
   <nav>
     <h3>Home page</h3>
     <span v-if="ceo == 'Jhon'">
-      {{ ceo }}
+      If condition is executed
+    </span>
+
+    <span v-else-if="ceo == 'Elon'">
+      Else If condition is executed
     </span>
 
     <span v-else="ceo == 'Mark'">
-      {{ ceo }}
+      Else condition is executed
     </span>
 
     <p>Name: {{ name }} Age: {{ state.age }}</p>
