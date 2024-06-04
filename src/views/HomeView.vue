@@ -3,11 +3,16 @@ import { ref, reactive } from 'vue'
 const name = ref()
 const state = reactive({ age: null })
 const ceo = ref('Mark')
+const week = ref("Tueday")
 </script>
 
 <template>
   <nav>
     <h3>Home page</h3>
+    <span>
+      {{ week == 'Monday' ? 'If executed' : week == 'Tueday' ? 'Else If executed' : 'Else executed' }}
+    </span>
+    <hr />
     <span v-if="ceo == 'Jhon'">
       If condition is executed
     </span>
